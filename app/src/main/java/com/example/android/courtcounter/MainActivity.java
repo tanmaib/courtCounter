@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView scoreViewA, scoreViewB;
-    int scoreTeamA = 0, scoreTeamB = 0;
+    private TextView scoreViewA, scoreViewB;
+    private int scoreTeamA = 0, scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,28 @@ public class MainActivity extends AppCompatActivity {
         scoreViewA = (TextView) findViewById(R.id.team_a_score);
         scoreViewB = (TextView) findViewById(R.id.team_b_score);
         //displayForTeamA(8);
+    }
+
+    /** This method is right before we change orientation, to preserve values */
+    @Override
+    protected void onSaveInstanceState (Bundle outState){
+
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("TeamA",scoreTeamA);
+        outState.putInt("TeamB",scoreTeamB);
+    }
+
+    /** This method is called to display values in the UI which were saved */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        super.onRestoreInstanceState(savedInstanceState);
+
+        scoreTeamA = savedInstanceState.getInt("TeamA");
+        displayForTeamA(scoreTeamA);
+        scoreTeamB = savedInstanceState.getInt("TeamB");
+        displayForTeamB(scoreTeamB);
     }
 
     /** This Method is called when +3 Points button is clicked **/
