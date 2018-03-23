@@ -85,7 +85,6 @@
         android:layout_width="@dimen/match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/Layout_2"
-        android:background="@android:color/background_light"
         android:fillViewport="true"
         android:orientation="vertical">
 
@@ -93,11 +92,21 @@
             android:layout_width="@dimen/match_parent"
             android:layout_height="@dimen/match_parent">
 
+            <ImageView
+                android:layout_width="@dimen/wrap_content"
+                android:layout_height="@dimen/wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/Button_Margin_Top"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc"
+                android:scaleType="center"
+                android:src="@drawable/nbalogo" />
+
             <LinearLayout
+                android:id="@+id/Layout_3"
                 android:layout_width="@dimen/match_parent"
                 android:layout_height="@dimen/wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/Layout_3">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="@dimen/wrap_content"
