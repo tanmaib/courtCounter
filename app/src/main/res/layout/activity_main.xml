@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_1"
     android:layout_width="@dimen/match_parent"
     android:layout_height="@dimen/match_parent"
     tools:context="com.example.android.courtcounter.MainActivity">
 
     <LinearLayout
+        android:id="@+id/Layout_2"
         android:layout_width="@dimen/match_parent"
         android:layout_height="@dimen/wrap_content"
         android:orientation="horizontal">
@@ -33,39 +35,9 @@
                 android:layout_marginTop="@dimen/Text_Margin_Top"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
-                android:text="0"
+                android:text="@string/Initial_value"
                 android:textColor="@color/Score"
                 android:textSize="@dimen/textSizeScore" />
-
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Top"
-                android:onClick="threePointerA"
-                android:text="@string/Three_Pointer"
-                android:textSize="@dimen/textSizeName" />
-
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Bottom"
-                android:onClick="twoPointerA"
-                android:text="@string/Two_Pointer"
-                android:textSize="@dimen/textSizeName" />
-
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Bottom"
-                android:onClick="freeThrowA"
-                android:text="@string/Free_Throw"
-                android:textSize="@dimen/textSizeName" />
 
         </LinearLayout>
 
@@ -101,51 +73,132 @@
                 android:layout_marginTop="@dimen/Text_Margin_Top"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
-                android:text="0"
+                android:text="@string/Initial_value"
                 android:textColor="@color/Score"
                 android:textSize="@dimen/textSizeScore" />
 
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Top"
-                android:onClick="threePointerB"
-                android:text="@string/Three_Pointer"
-                android:textSize="@dimen/textSizeName" />
-
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Bottom"
-                android:onClick="twoPointerB"
-                android:text="@string/Two_Pointer"
-                android:textSize="@dimen/textSizeName" />
-
-            <Button
-                android:layout_width="@dimen/match_parent"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginLeft="@dimen/Button_Margin_Left"
-                android:layout_marginRight="@dimen/Button_Margin_Right"
-                android:layout_marginTop="@dimen/Button_Margin_Bottom"
-                android:onClick="freeThrowB"
-                android:text="@string/Free_Throw"
-                android:textSize="@dimen/textSizeName" />
-
         </LinearLayout>
+
     </LinearLayout>
 
-    <Button
-        android:layout_width="@dimen/wrap_content"
-        android:layout_height="@dimen/wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/Button_Reset"
-        android:onClick="resetScore"
-        android:text="@string/Reset_Button"
-        android:textSize="@dimen/textSizeName" />
+    <ScrollView
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/Layout_2"
+        android:background="@android:color/background_light"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/match_parent">
+
+            <LinearLayout
+                android:layout_width="@dimen/match_parent"
+                android:layout_height="@dimen/wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/Layout_3">
+
+                <LinearLayout
+                    android:layout_width="@dimen/wrap_content"
+                    android:layout_height="@dimen/wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Top"
+                        android:onClick="threePointerA"
+                        android:text="@string/Three_Pointer"
+                        android:textSize="@dimen/textSizeName" />
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Bottom"
+                        android:onClick="twoPointerA"
+                        android:text="@string/Two_Pointer"
+                        android:textSize="@dimen/textSizeName" />
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginBottom="@dimen/Button_Margin_Top"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Bottom"
+                        android:onClick="freeThrowA"
+                        android:text="@string/Free_Throw"
+                        android:textSize="@dimen/textSizeName" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/match_parent"
+                    android:background="@color/colorPrimaryDark">
+
+                </View>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/wrap_content"
+                    android:layout_height="@dimen/wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Top"
+                        android:onClick="threePointerB"
+                        android:text="@string/Three_Pointer"
+                        android:textSize="@dimen/textSizeName" />
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Bottom"
+                        android:onClick="twoPointerB"
+                        android:text="@string/Two_Pointer"
+                        android:textSize="@dimen/textSizeName" />
+
+                    <Button
+                        android:layout_width="@dimen/match_parent"
+                        android:layout_height="@dimen/wrap_content"
+                        android:layout_marginBottom="@dimen/Button_Margin_Top"
+                        android:layout_marginLeft="@dimen/Button_Margin_Left"
+                        android:layout_marginRight="@dimen/Button_Margin_Right"
+                        android:layout_marginTop="@dimen/Button_Margin_Bottom"
+                        android:onClick="freeThrowB"
+                        android:text="@string/Free_Throw"
+                        android:textSize="@dimen/textSizeName" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="@dimen/wrap_content"
+                android:layout_height="@dimen/wrap_content"
+                android:layout_below="@id/Layout_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/Button_Reset"
+                android:onClick="resetScore"
+                android:text="@string/Reset_Button"
+                android:textSize="@dimen/textSizeName" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

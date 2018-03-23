@@ -14,6 +14,6 @@
     <dimen name="Button_Margin_Left">24dp</dimen>
     <dimen name="Button_Margin_Right">24dp</dimen>
     <dimen name="Button_Margin_Bottom">8dp</dimen>
-    <dimen name="Button_Reset">32dp</dimen>
+    <dimen name="Button_Reset">100dp</dimen>
 
 </resources>

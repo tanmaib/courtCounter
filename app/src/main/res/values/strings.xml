@@ -6,4 +6,5 @@
     <string name="Two_Pointer">+2 Points</string>
     <string name="Free_Throw">Free Throw</string>
     <string name="Reset_Button">Reset</string>
+    <string name="Initial_value">0</string>
 </resources>
